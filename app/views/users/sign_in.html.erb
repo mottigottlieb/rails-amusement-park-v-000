@@ -1,0 +1,15 @@
+ <p>Sign In Page</p>
+
+
+ 
+ 
+
+ <%= form_tag("/signin", method: "post") do %>
+  <%= label_tag(:user, "Name:") %>
+  <%= text_field_tag(:user) %>
+   <%= label_tag(:password, "Password:") %>
+  <%= text_field_tag(:password) %>
+  
+  <%= submit_tag("Sign in") %>
+<% end %>
+

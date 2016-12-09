@@ -3,7 +3,7 @@ require_relative "../rails_helper.rb"
 describe 'Feature Test: User Signup', :type => :feature do
 
   it 'successfully signs up as non-admin' do
-    visit_signup
+    visit_signup 
     expect(current_path).to eq('/users/new')
     user_signup
     expect(current_path).to eq('/users/1')
@@ -13,7 +13,7 @@ describe 'Feature Test: User Signup', :type => :feature do
     expect(page).to have_content("15")
     expect(page).to have_content("58")
   end
-
+ 
   it "on sign up, successfully adds a session hash" do
     visit_signup
     user_signup

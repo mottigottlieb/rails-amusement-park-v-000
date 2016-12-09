@@ -1,0 +1,16 @@
+Name:<p><%=@user.name%></p>
+Mood:<p><%=@user.mood%></p>
+Height:<p><%=@user.happiness%></p>
+Mood:<p><%=@user.nausea%></p>
+Happines:<p><%=@user.happiness%></p>
+
+
+<!--(:user).permit(:name, :password, :height, :happiness, :nausea,:tickets)
+ -->
+
+     expect(current_path).to eq('/users/1')
+    expect(page).to have_content("Amy Poehler")
+    expect(page).to have_content("Mood")
+    expect(page).to have_content("happy")
+    expect(page).to have_content("15")
+    expect(page).to have_content("58")
