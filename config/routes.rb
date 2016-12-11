@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
  	root to: 'static#home'
- 	get '/signin', to: 'users#sign_in'
- 	post '/signin', to: 'users#sign_in'
+ 	
+ 	get '/signin', to: 'sessions#sign_in'
+ 	
+ 	post '/signin', to: 'sessions#create'
 
- 	get '/logout', to: 'users#destroy'
+ 	get '/logout', to: 'sessions#destroy'
 	resources :users
 end
