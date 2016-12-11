@@ -5,15 +5,15 @@ module LoginHelper
     click_link('Sign up')
   end
 
-  def user_signup
-    fill_in("user[name]", :with => "Amy Poehler")
-    fill_in("user[height]", :with => "58")
-    fill_in("user[happiness]", :with => "3")
-    fill_in("user[nausea]", :with => "2")
-    fill_in("user[tickets]", :with => "15")
-    fill_in("user[password]", :with => "password")
-    click_button('Create User')
-  end
+      def user_signup
+        fill_in("user[name]", :with => "Amy Poehler")
+        fill_in("user[height]", :with => "58")
+        fill_in("user[happiness]", :with => "3")
+        fill_in("user[nausea]", :with => "2")
+        fill_in("user[tickets]", :with => "15")
+        fill_in("user[password]", :with => "password")
+        click_button('Create User')
+      end
 
   def visit_signin
     visit '/'
@@ -25,6 +25,7 @@ module LoginHelper
       name: "Mindy",
       password: "password",
       happiness: 3,
+
       nausea: 2,
       tickets: 10,
       height: 50
